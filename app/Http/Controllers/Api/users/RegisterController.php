@@ -35,7 +35,7 @@ class RegisterController extends Controller
 
         } catch (\Throwable $th) {
     
-            $errors = $th->errors();
+            $errors = $th->getMessage();
             $response = [
                 'data' => null,
                 'message' => $errors,
